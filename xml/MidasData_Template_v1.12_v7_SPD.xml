@@ -1,0 +1,2801 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UANodeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd">
+  <NamespaceUris>
+    <Uri>http://opcfoundation.org/UA/DI/</Uri>
+    <Uri>http://pri.lge.com/midas/common/v1</Uri>
+    <Uri>http://pri.lge.com/midas/dynamic/v1</Uri>
+  </NamespaceUris>
+  <Aliases>
+    <Alias Alias="AnalogItemType">ns=0;i=2368</Alias>
+    <Alias Alias="Argument">ns=0;i=296</Alias>
+    <Alias Alias="BaseDataType">ns=0;i=24</Alias>
+    <Alias Alias="BaseDataVariableType">ns=0;i=63</Alias>
+    <Alias Alias="BaseObjectType">ns=0;i=58</Alias>
+    <Alias Alias="Boolean">ns=0;i=1</Alias>
+    <Alias Alias="DWord">ns=0;i=7</Alias>
+    <Alias Alias="Double">ns=0;i=11</Alias>
+    <Alias Alias="EUInformation">ns=0;i=887</Alias>
+    <Alias Alias="FileType">ns=0;i=11575</Alias>
+    <Alias Alias="HasComponent">ns=0;i=47</Alias>
+    <Alias Alias="HasEventSource">ns=0;i=36</Alias>
+    <Alias Alias="HasModellingRule">ns=0;i=37</Alias>
+    <Alias Alias="HasNotifier">ns=0;i=48</Alias>
+    <Alias Alias="HasProperty">ns=0;i=46</Alias>
+    <Alias Alias="HasRelatedSetting">ns=0;i=13000</Alias>
+    <Alias Alias="HasStage">ns=0;i=13002</Alias>
+    <Alias Alias="HasSubtype">ns=0;i=45</Alias>
+    <Alias Alias="HasTrigger">ns=0;i=13001</Alias>
+    <Alias Alias="HasTypeDefinition">ns=0;i=40</Alias>
+    <Alias Alias="Int16">ns=0;i=4</Alias>
+    <Alias Alias="Mandatory">ns=0;i=78</Alias>
+    <Alias Alias="Organizes">ns=0;i=35</Alias>
+    <Alias Alias="PropertyType">ns=0;i=68</Alias>
+    <Alias Alias="Range">ns=0;i=884</Alias>
+    <Alias Alias="SByte">ns=0;i=2</Alias>
+    <Alias Alias="String">ns=0;i=12</Alias>
+    <Alias Alias="Word">ns=0;i=5</Alias>
+  </Aliases>
+  <UAObject NodeId="ns=3;g=8f641362-79d4-4ab6-aab1-0a2ec577c12c" BrowseName="3:OP2_Alpha_SPD" EventNotifier="1">
+    <DisplayName>OP2_Alpha_SPD</DisplayName>
+    <Description>OP2_Alpha_SPD</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=3;i=1</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=4acf0518-cd2d-4da7-9905-995bd142b428</Reference>
+      <Reference ReferenceType="HasNotifier" IsForward="false">ns=0;i=2253</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5001</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=1</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <Device>
+          <DriverId>MELSEC-Q-Series</DriverId>
+          <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+          <StationNumber>5</StationNumber>
+          <ReadType>MULTIPLE</ReadType>
+        </Device>
+        <Device>
+          <DriverId>PC_Driver</DriverId>
+          <DeviceId>OP2_Alpha_SPD_P_0</DeviceId>
+          <ReadType>PC</ReadType>
+          <WriteTimeSearch>False</WriteTimeSearch>
+          <Sources>
+            <Source id="0">
+              <SearchSubDir>True</SearchSubDir>
+              <Parser>CatCsv</Parser>
+              <SharedRootFolder>TestFiles_acc</SharedRootFolder>
+              <TimeFormat>%Y-%m-%d %H:%M:%s.%f</TimeFormat>
+              <DataFileName>Run Data {\d(4)}-{\d(2)}-{\d(2)}.csv</DataFileName>
+              <TimeColName>Date[Time]</TimeColName>
+            </Source>
+          </Sources>
+        </Device>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAVariable NodeId="ns=3;i=1" BrowseName="3:Location" ParentNodeId="ns=3;g=8f641362-79d4-4ab6-aab1-0a2ec577c12c" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Location</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=8f641362-79d4-4ab6-aab1-0a2ec577c12c</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">LGD/KOR/PJ/OP2/E8</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" BrowseName="3:SpdMelsecq" ParentNodeId="ns=3;g=8f641362-79d4-4ab6-aab1-0a2ec577c12c" EventNotifier="1">
+    <DisplayName>SpdMelsecq</DisplayName>
+    <Description>SpdMelsecq</Description>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=3;g=1d12920f-a488-4804-aef1-e03179e1fae0</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=63dcf9c8-2d15-47f7-ac20-4cd248c2fa13</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=8394c925-566a-44d4-bcb2-ff07692af22f</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=b7c517c4-bc09-4f11-8a97-891feae9da3f</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=e36c69c2-c628-4eb8-9dc9-1062454c2122</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=52c9a8e4-d1bb-46c3-9c67-5ef38fcb04f7</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=af516524-1e62-46af-8567-46f32467c106</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=213a3b93-b70b-4d1c-96c0-40b6cff394fa</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=e915f4df-950c-4126-9edb-4d535529312c</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=a42098c1-ebe1-4f3f-8333-758f85dbaa2a</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=3098f64f-e07e-45b7-8772-4c7643f2dec2</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=6374a25a-d7b3-4742-8fbd-34c846ea50c4</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=71775289-5d14-43d5-948f-266953a6b60f</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=5f6b3a49-58f4-4b9c-853a-53c0a935df5b</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=263c7eb0-bb12-4deb-a3d2-44af3d1d9e1c</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=313bb642-03b7-4ef8-b05e-4830bb414a2e</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=c7f34ddd-5063-4e88-a263-4ef046b4440b</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=11b9d652-4784-4061-8eee-e008de4063f0</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=8c34e816-26f6-47b3-8ccc-e8bb7f0c3743</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=4d0f0f0d-ff73-4a1b-a02c-59d79a4e488c</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=81ee143c-5aed-4afd-b210-b8b78d78730d</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=6a699083-b705-4d2c-acb7-58dc9e809948</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=f0ef5690-5415-490d-b999-abb506fca27a</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=b336af05-9711-4e19-b10a-2263d600731a</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=0dcd03b7-1528-4202-bad0-1958363f2cee</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=5cd90eb7-d453-4603-8d6b-af9fa1a6984a</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=b327757b-f213-4e13-80f5-2d30eb81f577</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=1b7bcb8f-984e-46f5-bff6-8b894b5e6f2f</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=b459b923-b097-4042-86fc-76ee7ecf7e1d</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=b235d023-97ef-411c-92bc-3043251b8b06</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=74078e9a-1bf6-4304-9e91-93df34fe271c</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=74285985-60f2-4177-8898-cd1b374f910a</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=ade4b164-dafd-4610-aa2d-d0508cd17121</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=2ccd7c77-4a63-4fc7-a001-8e1a2f2752b3</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=cf6e0ca3-f910-4a60-a6d2-bf69f9e139e8</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=97fe8ec6-36f8-493a-85a3-0190fd3028b7</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=d580dd47-07ad-4209-a3c0-b124fb74b73c</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;g=41a1bb02-3dc5-4823-90e7-a04728cbfe5a</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=100</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=8f641362-79d4-4ab6-aab1-0a2ec577c12c</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=3;g=1d12920f-a488-4804-aef1-e03179e1fae0" BrowseName="3:TIME(year)" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>TIME(year)</DisplayName>
+    <Description>년</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=2</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=3</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=4</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=5</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D39500</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=2" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=1d12920f-a488-4804-aef1-e03179e1fae0" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=1d12920f-a488-4804-aef1-e03179e1fae0</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=3" BrowseName="3:Measure" ParentNodeId="ns=3;g=1d12920f-a488-4804-aef1-e03179e1fae0" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=1d12920f-a488-4804-aef1-e03179e1fae0</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">times</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=4" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=1d12920f-a488-4804-aef1-e03179e1fae0" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=1d12920f-a488-4804-aef1-e03179e1fae0</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=5" BrowseName="3:Gathering" ParentNodeId="ns=3;g=1d12920f-a488-4804-aef1-e03179e1fae0" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=1d12920f-a488-4804-aef1-e03179e1fae0</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=63dcf9c8-2d15-47f7-ac20-4cd248c2fa13" BrowseName="3:TIME(month)" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>TIME(month)</DisplayName>
+    <Description>월</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=6</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=7</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=8</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=9</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D39501</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=6" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=63dcf9c8-2d15-47f7-ac20-4cd248c2fa13" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=63dcf9c8-2d15-47f7-ac20-4cd248c2fa13</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=7" BrowseName="3:Measure" ParentNodeId="ns=3;g=63dcf9c8-2d15-47f7-ac20-4cd248c2fa13" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=63dcf9c8-2d15-47f7-ac20-4cd248c2fa13</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">times</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=8" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=63dcf9c8-2d15-47f7-ac20-4cd248c2fa13" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=63dcf9c8-2d15-47f7-ac20-4cd248c2fa13</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=9" BrowseName="3:Gathering" ParentNodeId="ns=3;g=63dcf9c8-2d15-47f7-ac20-4cd248c2fa13" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=63dcf9c8-2d15-47f7-ac20-4cd248c2fa13</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=8394c925-566a-44d4-bcb2-ff07692af22f" BrowseName="3:TIME(day)" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>TIME(day)</DisplayName>
+    <Description>일</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=10</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=11</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=12</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=13</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D39502</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=10" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=8394c925-566a-44d4-bcb2-ff07692af22f" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=8394c925-566a-44d4-bcb2-ff07692af22f</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=11" BrowseName="3:Measure" ParentNodeId="ns=3;g=8394c925-566a-44d4-bcb2-ff07692af22f" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=8394c925-566a-44d4-bcb2-ff07692af22f</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">times</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=12" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=8394c925-566a-44d4-bcb2-ff07692af22f" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=8394c925-566a-44d4-bcb2-ff07692af22f</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=13" BrowseName="3:Gathering" ParentNodeId="ns=3;g=8394c925-566a-44d4-bcb2-ff07692af22f" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=8394c925-566a-44d4-bcb2-ff07692af22f</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=b7c517c4-bc09-4f11-8a97-891feae9da3f" BrowseName="3:TIME(hour)" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>TIME(hour)</DisplayName>
+    <Description>시</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=14</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=15</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=16</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=17</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D39503</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=14" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=b7c517c4-bc09-4f11-8a97-891feae9da3f" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=b7c517c4-bc09-4f11-8a97-891feae9da3f</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=15" BrowseName="3:Measure" ParentNodeId="ns=3;g=b7c517c4-bc09-4f11-8a97-891feae9da3f" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=b7c517c4-bc09-4f11-8a97-891feae9da3f</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">times</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=16" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=b7c517c4-bc09-4f11-8a97-891feae9da3f" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=b7c517c4-bc09-4f11-8a97-891feae9da3f</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=17" BrowseName="3:Gathering" ParentNodeId="ns=3;g=b7c517c4-bc09-4f11-8a97-891feae9da3f" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=b7c517c4-bc09-4f11-8a97-891feae9da3f</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=e36c69c2-c628-4eb8-9dc9-1062454c2122" BrowseName="3:TIME(min)" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>TIME(min)</DisplayName>
+    <Description>분</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=18</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=19</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=20</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=21</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D39504</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=18" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=e36c69c2-c628-4eb8-9dc9-1062454c2122" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=e36c69c2-c628-4eb8-9dc9-1062454c2122</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=19" BrowseName="3:Measure" ParentNodeId="ns=3;g=e36c69c2-c628-4eb8-9dc9-1062454c2122" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=e36c69c2-c628-4eb8-9dc9-1062454c2122</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">times</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=20" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=e36c69c2-c628-4eb8-9dc9-1062454c2122" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=e36c69c2-c628-4eb8-9dc9-1062454c2122</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=21" BrowseName="3:Gathering" ParentNodeId="ns=3;g=e36c69c2-c628-4eb8-9dc9-1062454c2122" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=e36c69c2-c628-4eb8-9dc9-1062454c2122</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=52c9a8e4-d1bb-46c3-9c67-5ef38fcb04f7" BrowseName="3:TIME(sec)" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>TIME(sec)</DisplayName>
+    <Description>초</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=22</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=23</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=24</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=25</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D39505</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=22" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=52c9a8e4-d1bb-46c3-9c67-5ef38fcb04f7" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=52c9a8e4-d1bb-46c3-9c67-5ef38fcb04f7</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=23" BrowseName="3:Measure" ParentNodeId="ns=3;g=52c9a8e4-d1bb-46c3-9c67-5ef38fcb04f7" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=52c9a8e4-d1bb-46c3-9c67-5ef38fcb04f7</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">times</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=24" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=52c9a8e4-d1bb-46c3-9c67-5ef38fcb04f7" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=52c9a8e4-d1bb-46c3-9c67-5ef38fcb04f7</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=25" BrowseName="3:Gathering" ParentNodeId="ns=3;g=52c9a8e4-d1bb-46c3-9c67-5ef38fcb04f7" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=52c9a8e4-d1bb-46c3-9c67-5ef38fcb04f7</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=af516524-1e62-46af-8567-46f32467c106" BrowseName="3:NUMBER" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>NUMBER</DisplayName>
+    <Description>구동별 Numbering</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=26</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=27</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=28</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=29</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D39505</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=26" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=af516524-1e62-46af-8567-46f32467c106" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=af516524-1e62-46af-8567-46f32467c106</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=27" BrowseName="3:Measure" ParentNodeId="ns=3;g=af516524-1e62-46af-8567-46f32467c106" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=af516524-1e62-46af-8567-46f32467c106</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">NA</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=28" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=af516524-1e62-46af-8567-46f32467c106" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=af516524-1e62-46af-8567-46f32467c106</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=29" BrowseName="3:Gathering" ParentNodeId="ns=3;g=af516524-1e62-46af-8567-46f32467c106" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=af516524-1e62-46af-8567-46f32467c106</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=213a3b93-b70b-4d1c-96c0-40b6cff394fa" BrowseName="3:EVENT" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="ns=0;i=10">
+    <DisplayName>EVENT</DisplayName>
+    <Description>Servo Sequence</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=30</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=31</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=32</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=33</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D39505</AddressOnDevice>
+        <DecimalPlace>3</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>2</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Float xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Float>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=30" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=213a3b93-b70b-4d1c-96c0-40b6cff394fa" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=213a3b93-b70b-4d1c-96c0-40b6cff394fa</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=31" BrowseName="3:Measure" ParentNodeId="ns=3;g=213a3b93-b70b-4d1c-96c0-40b6cff394fa" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=213a3b93-b70b-4d1c-96c0-40b6cff394fa</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">NA</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=32" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=213a3b93-b70b-4d1c-96c0-40b6cff394fa" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=213a3b93-b70b-4d1c-96c0-40b6cff394fa</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=33" BrowseName="3:Gathering" ParentNodeId="ns=3;g=213a3b93-b70b-4d1c-96c0-40b6cff394fa" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=213a3b93-b70b-4d1c-96c0-40b6cff394fa</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=e915f4df-950c-4126-9edb-4d535529312c" BrowseName="3:STATUS" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>STATUS</DisplayName>
+    <Description>ONOFF 상태확인</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=34</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=35</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=36</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=37</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D39505</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=34" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=e915f4df-950c-4126-9edb-4d535529312c" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=e915f4df-950c-4126-9edb-4d535529312c</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=35" BrowseName="3:Measure" ParentNodeId="ns=3;g=e915f4df-950c-4126-9edb-4d535529312c" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=e915f4df-950c-4126-9edb-4d535529312c</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">NA</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=36" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=e915f4df-950c-4126-9edb-4d535529312c" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=e915f4df-950c-4126-9edb-4d535529312c</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=37" BrowseName="3:Gathering" ParentNodeId="ns=3;g=e915f4df-950c-4126-9edb-4d535529312c" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=e915f4df-950c-4126-9edb-4d535529312c</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=a42098c1-ebe1-4f3f-8333-758f85dbaa2a" BrowseName="3:COMMENT" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>COMMENT</DisplayName>
+    <Description>ONOFF Comment</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=38</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=39</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=40</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=41</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D39505</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=38" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=a42098c1-ebe1-4f3f-8333-758f85dbaa2a" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=a42098c1-ebe1-4f3f-8333-758f85dbaa2a</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=39" BrowseName="3:Measure" ParentNodeId="ns=3;g=a42098c1-ebe1-4f3f-8333-758f85dbaa2a" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=a42098c1-ebe1-4f3f-8333-758f85dbaa2a</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">NA</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=40" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=a42098c1-ebe1-4f3f-8333-758f85dbaa2a" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=a42098c1-ebe1-4f3f-8333-758f85dbaa2a</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=41" BrowseName="3:Gathering" ParentNodeId="ns=3;g=a42098c1-ebe1-4f3f-8333-758f85dbaa2a" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=a42098c1-ebe1-4f3f-8333-758f85dbaa2a</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=3098f64f-e07e-45b7-8772-4c7643f2dec2" BrowseName="3:BUFFER 위치 #1-1  C/V#1" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="ns=0;i=10">
+    <DisplayName>BUFFER 위치 #1-1  C/V#1</DisplayName>
+    <Description>BUFFER 위치 #1-1  C/V#1</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=42</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=43</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=44</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=45</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D0000</AddressOnDevice>
+        <DecimalPlace>2</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>2</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Float xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Float>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=42" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=3098f64f-e07e-45b7-8772-4c7643f2dec2" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=3098f64f-e07e-45b7-8772-4c7643f2dec2</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=43" BrowseName="3:Measure" ParentNodeId="ns=3;g=3098f64f-e07e-45b7-8772-4c7643f2dec2" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=3098f64f-e07e-45b7-8772-4c7643f2dec2</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">mm</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=44" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=3098f64f-e07e-45b7-8772-4c7643f2dec2" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=3098f64f-e07e-45b7-8772-4c7643f2dec2</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=45" BrowseName="3:Gathering" ParentNodeId="ns=3;g=3098f64f-e07e-45b7-8772-4c7643f2dec2" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=3098f64f-e07e-45b7-8772-4c7643f2dec2</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=6374a25a-d7b3-4742-8fbd-34c846ea50c4" BrowseName="3:BUFFER 위치 #1-2  C/V#2" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="ns=0;i=10">
+    <DisplayName>BUFFER 위치 #1-2  C/V#2</DisplayName>
+    <Description>BUFFER 위치 #1-2  C/V#2</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=46</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=47</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=48</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=49</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D0020</AddressOnDevice>
+        <DecimalPlace>2</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>2</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Float xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Float>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=46" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=6374a25a-d7b3-4742-8fbd-34c846ea50c4" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=6374a25a-d7b3-4742-8fbd-34c846ea50c4</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=47" BrowseName="3:Measure" ParentNodeId="ns=3;g=6374a25a-d7b3-4742-8fbd-34c846ea50c4" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=6374a25a-d7b3-4742-8fbd-34c846ea50c4</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">mm</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=48" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=6374a25a-d7b3-4742-8fbd-34c846ea50c4" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=6374a25a-d7b3-4742-8fbd-34c846ea50c4</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=49" BrowseName="3:Gathering" ParentNodeId="ns=3;g=6374a25a-d7b3-4742-8fbd-34c846ea50c4" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=6374a25a-d7b3-4742-8fbd-34c846ea50c4</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=71775289-5d14-43d5-948f-266953a6b60f" BrowseName="3:BUFFER 위치 #1-3  C/V#3" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="ns=0;i=10">
+    <DisplayName>BUFFER 위치 #1-3  C/V#3</DisplayName>
+    <Description>BUFFER 위치 #1-3  C/V#3</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=50</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=51</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=52</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=53</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D0040</AddressOnDevice>
+        <DecimalPlace>2</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>2</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Float xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Float>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=50" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=71775289-5d14-43d5-948f-266953a6b60f" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=71775289-5d14-43d5-948f-266953a6b60f</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=51" BrowseName="3:Measure" ParentNodeId="ns=3;g=71775289-5d14-43d5-948f-266953a6b60f" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=71775289-5d14-43d5-948f-266953a6b60f</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">mm</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=52" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=71775289-5d14-43d5-948f-266953a6b60f" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=71775289-5d14-43d5-948f-266953a6b60f</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=53" BrowseName="3:Gathering" ParentNodeId="ns=3;g=71775289-5d14-43d5-948f-266953a6b60f" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=71775289-5d14-43d5-948f-266953a6b60f</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=5f6b3a49-58f4-4b9c-853a-53c0a935df5b" BrowseName="3:BUFFER 위치 #1-4  C/V#4" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="ns=0;i=10">
+    <DisplayName>BUFFER 위치 #1-4  C/V#4</DisplayName>
+    <Description>BUFFER 위치 #1-4  C/V#4</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=54</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=55</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=56</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=57</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D0060</AddressOnDevice>
+        <DecimalPlace>2</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>2</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Float xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Float>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=54" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=5f6b3a49-58f4-4b9c-853a-53c0a935df5b" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=5f6b3a49-58f4-4b9c-853a-53c0a935df5b</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=55" BrowseName="3:Measure" ParentNodeId="ns=3;g=5f6b3a49-58f4-4b9c-853a-53c0a935df5b" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=5f6b3a49-58f4-4b9c-853a-53c0a935df5b</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">mm</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=56" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=5f6b3a49-58f4-4b9c-853a-53c0a935df5b" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=5f6b3a49-58f4-4b9c-853a-53c0a935df5b</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=57" BrowseName="3:Gathering" ParentNodeId="ns=3;g=5f6b3a49-58f4-4b9c-853a-53c0a935df5b" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=5f6b3a49-58f4-4b9c-853a-53c0a935df5b</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=263c7eb0-bb12-4deb-a3d2-44af3d1d9e1c" BrowseName="3:BUFFER 위치 #1-5  C/V#5" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="ns=0;i=10">
+    <DisplayName>BUFFER 위치 #1-5  C/V#5</DisplayName>
+    <Description>BUFFER 위치 #1-5  C/V#5</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=58</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=59</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=60</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=61</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D0080</AddressOnDevice>
+        <DecimalPlace>2</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>2</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Float xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Float>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=58" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=263c7eb0-bb12-4deb-a3d2-44af3d1d9e1c" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=263c7eb0-bb12-4deb-a3d2-44af3d1d9e1c</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=59" BrowseName="3:Measure" ParentNodeId="ns=3;g=263c7eb0-bb12-4deb-a3d2-44af3d1d9e1c" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=263c7eb0-bb12-4deb-a3d2-44af3d1d9e1c</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">mm</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=60" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=263c7eb0-bb12-4deb-a3d2-44af3d1d9e1c" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=263c7eb0-bb12-4deb-a3d2-44af3d1d9e1c</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=61" BrowseName="3:Gathering" ParentNodeId="ns=3;g=263c7eb0-bb12-4deb-a3d2-44af3d1d9e1c" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=263c7eb0-bb12-4deb-a3d2-44af3d1d9e1c</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=313bb642-03b7-4ef8-b05e-4830bb414a2e" BrowseName="3:BUFFER 위치 #1-6  C/V#6" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="ns=0;i=10">
+    <DisplayName>BUFFER 위치 #1-6  C/V#6</DisplayName>
+    <Description>BUFFER 위치 #1-6  C/V#6</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=62</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=63</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=64</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=65</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D30700</AddressOnDevice>
+        <DecimalPlace>2</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>2</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Float xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Float>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=62" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=313bb642-03b7-4ef8-b05e-4830bb414a2e" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=313bb642-03b7-4ef8-b05e-4830bb414a2e</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=63" BrowseName="3:Measure" ParentNodeId="ns=3;g=313bb642-03b7-4ef8-b05e-4830bb414a2e" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=313bb642-03b7-4ef8-b05e-4830bb414a2e</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">mm</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=64" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=313bb642-03b7-4ef8-b05e-4830bb414a2e" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=313bb642-03b7-4ef8-b05e-4830bb414a2e</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=65" BrowseName="3:Gathering" ParentNodeId="ns=3;g=313bb642-03b7-4ef8-b05e-4830bb414a2e" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=313bb642-03b7-4ef8-b05e-4830bb414a2e</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=c7f34ddd-5063-4e88-a263-4ef046b4440b" BrowseName="3:BUFFER 속도 #1-1  C/V#1" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="ns=0;i=10">
+    <DisplayName>BUFFER 속도 #1-1  C/V#1</DisplayName>
+    <Description>BUFFER 속도 #1-1  C/V#1</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=66</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=67</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=68</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=69</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D30702</AddressOnDevice>
+        <DecimalPlace>2</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>2</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Float xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Float>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=66" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=c7f34ddd-5063-4e88-a263-4ef046b4440b" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=c7f34ddd-5063-4e88-a263-4ef046b4440b</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=67" BrowseName="3:Measure" ParentNodeId="ns=3;g=c7f34ddd-5063-4e88-a263-4ef046b4440b" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=c7f34ddd-5063-4e88-a263-4ef046b4440b</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">mm/s</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=68" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=c7f34ddd-5063-4e88-a263-4ef046b4440b" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=c7f34ddd-5063-4e88-a263-4ef046b4440b</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=69" BrowseName="3:Gathering" ParentNodeId="ns=3;g=c7f34ddd-5063-4e88-a263-4ef046b4440b" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=c7f34ddd-5063-4e88-a263-4ef046b4440b</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=11b9d652-4784-4061-8eee-e008de4063f0" BrowseName="3:BUFFER 속도 #1-2  C/V#2" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="ns=0;i=10">
+    <DisplayName>BUFFER 속도 #1-2  C/V#2</DisplayName>
+    <Description>BUFFER 속도 #1-2  C/V#2</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=70</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=71</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=72</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=73</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D30704</AddressOnDevice>
+        <DecimalPlace>2</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>2</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Float xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Float>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=70" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=11b9d652-4784-4061-8eee-e008de4063f0" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=11b9d652-4784-4061-8eee-e008de4063f0</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=71" BrowseName="3:Measure" ParentNodeId="ns=3;g=11b9d652-4784-4061-8eee-e008de4063f0" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=11b9d652-4784-4061-8eee-e008de4063f0</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">mm/s</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=72" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=11b9d652-4784-4061-8eee-e008de4063f0" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=11b9d652-4784-4061-8eee-e008de4063f0</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=73" BrowseName="3:Gathering" ParentNodeId="ns=3;g=11b9d652-4784-4061-8eee-e008de4063f0" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=11b9d652-4784-4061-8eee-e008de4063f0</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=8c34e816-26f6-47b3-8ccc-e8bb7f0c3743" BrowseName="3:BUFFER 속도 #1-3  C/V#3" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="ns=0;i=10">
+    <DisplayName>BUFFER 속도 #1-3  C/V#3</DisplayName>
+    <Description>BUFFER 속도 #1-3  C/V#3</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=74</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=75</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=76</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=77</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D30706</AddressOnDevice>
+        <DecimalPlace>2</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>2</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Float xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Float>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=74" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=8c34e816-26f6-47b3-8ccc-e8bb7f0c3743" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=8c34e816-26f6-47b3-8ccc-e8bb7f0c3743</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=75" BrowseName="3:Measure" ParentNodeId="ns=3;g=8c34e816-26f6-47b3-8ccc-e8bb7f0c3743" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=8c34e816-26f6-47b3-8ccc-e8bb7f0c3743</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">mm/s</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=76" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=8c34e816-26f6-47b3-8ccc-e8bb7f0c3743" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=8c34e816-26f6-47b3-8ccc-e8bb7f0c3743</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=77" BrowseName="3:Gathering" ParentNodeId="ns=3;g=8c34e816-26f6-47b3-8ccc-e8bb7f0c3743" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=8c34e816-26f6-47b3-8ccc-e8bb7f0c3743</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=4d0f0f0d-ff73-4a1b-a02c-59d79a4e488c" BrowseName="3:BUFFER 속도 #1-4  C/V#4" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="ns=0;i=10">
+    <DisplayName>BUFFER 속도 #1-4  C/V#4</DisplayName>
+    <Description>BUFFER 속도 #1-4  C/V#4</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=78</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=79</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=80</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=81</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D30708</AddressOnDevice>
+        <DecimalPlace>2</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>2</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Float xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Float>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=78" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=4d0f0f0d-ff73-4a1b-a02c-59d79a4e488c" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=4d0f0f0d-ff73-4a1b-a02c-59d79a4e488c</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=79" BrowseName="3:Measure" ParentNodeId="ns=3;g=4d0f0f0d-ff73-4a1b-a02c-59d79a4e488c" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=4d0f0f0d-ff73-4a1b-a02c-59d79a4e488c</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">mm/s</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=80" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=4d0f0f0d-ff73-4a1b-a02c-59d79a4e488c" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=4d0f0f0d-ff73-4a1b-a02c-59d79a4e488c</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=81" BrowseName="3:Gathering" ParentNodeId="ns=3;g=4d0f0f0d-ff73-4a1b-a02c-59d79a4e488c" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=4d0f0f0d-ff73-4a1b-a02c-59d79a4e488c</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=81ee143c-5aed-4afd-b210-b8b78d78730d" BrowseName="3:BUFFER 속도 #1-5  C/V#5" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="ns=0;i=10">
+    <DisplayName>BUFFER 속도 #1-5  C/V#5</DisplayName>
+    <Description>BUFFER 속도 #1-5  C/V#5</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=82</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=83</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=84</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=85</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D30710</AddressOnDevice>
+        <DecimalPlace>2</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>2</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Float xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Float>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=82" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=81ee143c-5aed-4afd-b210-b8b78d78730d" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=81ee143c-5aed-4afd-b210-b8b78d78730d</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=83" BrowseName="3:Measure" ParentNodeId="ns=3;g=81ee143c-5aed-4afd-b210-b8b78d78730d" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=81ee143c-5aed-4afd-b210-b8b78d78730d</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">mm/s</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=84" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=81ee143c-5aed-4afd-b210-b8b78d78730d" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=81ee143c-5aed-4afd-b210-b8b78d78730d</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=85" BrowseName="3:Gathering" ParentNodeId="ns=3;g=81ee143c-5aed-4afd-b210-b8b78d78730d" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=81ee143c-5aed-4afd-b210-b8b78d78730d</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=6a699083-b705-4d2c-acb7-58dc9e809948" BrowseName="3:BUFFER 속도 #1-6  C/V#6" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="ns=0;i=10">
+    <DisplayName>BUFFER 속도 #1-6  C/V#6</DisplayName>
+    <Description>BUFFER 속도 #1-6  C/V#6</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=86</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=87</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=88</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=89</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D30712</AddressOnDevice>
+        <DecimalPlace>2</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>2</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Float xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Float>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=86" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=6a699083-b705-4d2c-acb7-58dc9e809948" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=6a699083-b705-4d2c-acb7-58dc9e809948</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=87" BrowseName="3:Measure" ParentNodeId="ns=3;g=6a699083-b705-4d2c-acb7-58dc9e809948" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=6a699083-b705-4d2c-acb7-58dc9e809948</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">mm/s</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=88" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=6a699083-b705-4d2c-acb7-58dc9e809948" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=6a699083-b705-4d2c-acb7-58dc9e809948</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=89" BrowseName="3:Gathering" ParentNodeId="ns=3;g=6a699083-b705-4d2c-acb7-58dc9e809948" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=6a699083-b705-4d2c-acb7-58dc9e809948</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=f0ef5690-5415-490d-b999-abb506fca27a" BrowseName="3:BUFFER 부하 #1-1  C/V#1" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>BUFFER 부하 #1-1  C/V#1</DisplayName>
+    <Description>BUFFER 부하 #1-1  C/V#1</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=90</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=91</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=92</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=93</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D7000</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=90" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=f0ef5690-5415-490d-b999-abb506fca27a" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=f0ef5690-5415-490d-b999-abb506fca27a</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=91" BrowseName="3:Measure" ParentNodeId="ns=3;g=f0ef5690-5415-490d-b999-abb506fca27a" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=f0ef5690-5415-490d-b999-abb506fca27a</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">%</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=92" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=f0ef5690-5415-490d-b999-abb506fca27a" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=f0ef5690-5415-490d-b999-abb506fca27a</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=93" BrowseName="3:Gathering" ParentNodeId="ns=3;g=f0ef5690-5415-490d-b999-abb506fca27a" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=f0ef5690-5415-490d-b999-abb506fca27a</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=b336af05-9711-4e19-b10a-2263d600731a" BrowseName="3:BUFFER 부하 #1-2  C/V#2" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>BUFFER 부하 #1-2  C/V#2</DisplayName>
+    <Description>BUFFER 부하 #1-2  C/V#2</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=94</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=95</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=96</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=97</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D7002</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=94" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=b336af05-9711-4e19-b10a-2263d600731a" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=b336af05-9711-4e19-b10a-2263d600731a</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=95" BrowseName="3:Measure" ParentNodeId="ns=3;g=b336af05-9711-4e19-b10a-2263d600731a" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=b336af05-9711-4e19-b10a-2263d600731a</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">%</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=96" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=b336af05-9711-4e19-b10a-2263d600731a" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=b336af05-9711-4e19-b10a-2263d600731a</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=97" BrowseName="3:Gathering" ParentNodeId="ns=3;g=b336af05-9711-4e19-b10a-2263d600731a" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=b336af05-9711-4e19-b10a-2263d600731a</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=0dcd03b7-1528-4202-bad0-1958363f2cee" BrowseName="3:BUFFER 부하 #1-3  C/V#3" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>BUFFER 부하 #1-3  C/V#3</DisplayName>
+    <Description>BUFFER 부하 #1-3  C/V#3</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=98</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=99</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=100</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=101</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D7004</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=98" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=0dcd03b7-1528-4202-bad0-1958363f2cee" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=0dcd03b7-1528-4202-bad0-1958363f2cee</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=99" BrowseName="3:Measure" ParentNodeId="ns=3;g=0dcd03b7-1528-4202-bad0-1958363f2cee" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=0dcd03b7-1528-4202-bad0-1958363f2cee</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">%</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=100" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=0dcd03b7-1528-4202-bad0-1958363f2cee" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=0dcd03b7-1528-4202-bad0-1958363f2cee</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=101" BrowseName="3:Gathering" ParentNodeId="ns=3;g=0dcd03b7-1528-4202-bad0-1958363f2cee" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=0dcd03b7-1528-4202-bad0-1958363f2cee</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=5cd90eb7-d453-4603-8d6b-af9fa1a6984a" BrowseName="3:BUFFER 부하 #1-4  C/V#4" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>BUFFER 부하 #1-4  C/V#4</DisplayName>
+    <Description>BUFFER 부하 #1-4  C/V#4</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=102</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=103</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=104</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=105</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D7006</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=102" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=5cd90eb7-d453-4603-8d6b-af9fa1a6984a" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=5cd90eb7-d453-4603-8d6b-af9fa1a6984a</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=103" BrowseName="3:Measure" ParentNodeId="ns=3;g=5cd90eb7-d453-4603-8d6b-af9fa1a6984a" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=5cd90eb7-d453-4603-8d6b-af9fa1a6984a</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">%</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=104" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=5cd90eb7-d453-4603-8d6b-af9fa1a6984a" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=5cd90eb7-d453-4603-8d6b-af9fa1a6984a</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=105" BrowseName="3:Gathering" ParentNodeId="ns=3;g=5cd90eb7-d453-4603-8d6b-af9fa1a6984a" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=5cd90eb7-d453-4603-8d6b-af9fa1a6984a</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=b327757b-f213-4e13-80f5-2d30eb81f577" BrowseName="3:BUFFER 부하 #1-5  C/V#5" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>BUFFER 부하 #1-5  C/V#5</DisplayName>
+    <Description>BUFFER 부하 #1-5  C/V#5</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=106</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=107</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=108</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=109</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D7010</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=106" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=b327757b-f213-4e13-80f5-2d30eb81f577" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=b327757b-f213-4e13-80f5-2d30eb81f577</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=107" BrowseName="3:Measure" ParentNodeId="ns=3;g=b327757b-f213-4e13-80f5-2d30eb81f577" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=b327757b-f213-4e13-80f5-2d30eb81f577</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">%</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=108" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=b327757b-f213-4e13-80f5-2d30eb81f577" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=b327757b-f213-4e13-80f5-2d30eb81f577</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=109" BrowseName="3:Gathering" ParentNodeId="ns=3;g=b327757b-f213-4e13-80f5-2d30eb81f577" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=b327757b-f213-4e13-80f5-2d30eb81f577</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=1b7bcb8f-984e-46f5-bff6-8b894b5e6f2f" BrowseName="3:BUFFER 부하 #1-6  C/V#6" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>BUFFER 부하 #1-6  C/V#6</DisplayName>
+    <Description>BUFFER 부하 #1-6  C/V#6</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=110</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=111</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=112</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=113</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D7012</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=110" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=1b7bcb8f-984e-46f5-bff6-8b894b5e6f2f" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=1b7bcb8f-984e-46f5-bff6-8b894b5e6f2f</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=111" BrowseName="3:Measure" ParentNodeId="ns=3;g=1b7bcb8f-984e-46f5-bff6-8b894b5e6f2f" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=1b7bcb8f-984e-46f5-bff6-8b894b5e6f2f</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">%</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=112" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=1b7bcb8f-984e-46f5-bff6-8b894b5e6f2f" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=1b7bcb8f-984e-46f5-bff6-8b894b5e6f2f</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=113" BrowseName="3:Gathering" ParentNodeId="ns=3;g=1b7bcb8f-984e-46f5-bff6-8b894b5e6f2f" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=1b7bcb8f-984e-46f5-bff6-8b894b5e6f2f</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=b459b923-b097-4042-86fc-76ee7ecf7e1d" BrowseName="3:BUFFER PEAK부하 #1-1  C/V#1" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>BUFFER PEAK부하 #1-1  C/V#1</DisplayName>
+    <Description>BUFFER PEAK부하 #1-1  C/V#1</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=114</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=115</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=116</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=117</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D7100</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=114" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=b459b923-b097-4042-86fc-76ee7ecf7e1d" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=b459b923-b097-4042-86fc-76ee7ecf7e1d</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=115" BrowseName="3:Measure" ParentNodeId="ns=3;g=b459b923-b097-4042-86fc-76ee7ecf7e1d" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=b459b923-b097-4042-86fc-76ee7ecf7e1d</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">%</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=116" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=b459b923-b097-4042-86fc-76ee7ecf7e1d" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=b459b923-b097-4042-86fc-76ee7ecf7e1d</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=117" BrowseName="3:Gathering" ParentNodeId="ns=3;g=b459b923-b097-4042-86fc-76ee7ecf7e1d" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=b459b923-b097-4042-86fc-76ee7ecf7e1d</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=b235d023-97ef-411c-92bc-3043251b8b06" BrowseName="3:BUFFER PEAK부하 #1-2  C/V#2" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>BUFFER PEAK부하 #1-2  C/V#2</DisplayName>
+    <Description>BUFFER PEAK부하 #1-2  C/V#2</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=118</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=119</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=120</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=121</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D7102</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=118" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=b235d023-97ef-411c-92bc-3043251b8b06" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=b235d023-97ef-411c-92bc-3043251b8b06</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=119" BrowseName="3:Measure" ParentNodeId="ns=3;g=b235d023-97ef-411c-92bc-3043251b8b06" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=b235d023-97ef-411c-92bc-3043251b8b06</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">%</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=120" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=b235d023-97ef-411c-92bc-3043251b8b06" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=b235d023-97ef-411c-92bc-3043251b8b06</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=121" BrowseName="3:Gathering" ParentNodeId="ns=3;g=b235d023-97ef-411c-92bc-3043251b8b06" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=b235d023-97ef-411c-92bc-3043251b8b06</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=74078e9a-1bf6-4304-9e91-93df34fe271c" BrowseName="3:BUFFER PEAK부하 #1-3  C/V#3" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>BUFFER PEAK부하 #1-3  C/V#3</DisplayName>
+    <Description>BUFFER PEAK부하 #1-3  C/V#3</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=122</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=123</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=124</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=125</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D7104</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=122" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=74078e9a-1bf6-4304-9e91-93df34fe271c" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=74078e9a-1bf6-4304-9e91-93df34fe271c</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=123" BrowseName="3:Measure" ParentNodeId="ns=3;g=74078e9a-1bf6-4304-9e91-93df34fe271c" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=74078e9a-1bf6-4304-9e91-93df34fe271c</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">%</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=124" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=74078e9a-1bf6-4304-9e91-93df34fe271c" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=74078e9a-1bf6-4304-9e91-93df34fe271c</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=125" BrowseName="3:Gathering" ParentNodeId="ns=3;g=74078e9a-1bf6-4304-9e91-93df34fe271c" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=74078e9a-1bf6-4304-9e91-93df34fe271c</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=74285985-60f2-4177-8898-cd1b374f910a" BrowseName="3:BUFFER PEAK부하 #1-4  C/V#4" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>BUFFER PEAK부하 #1-4  C/V#4</DisplayName>
+    <Description>BUFFER PEAK부하 #1-4  C/V#4</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=126</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=127</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=128</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=129</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D7106</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=126" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=74285985-60f2-4177-8898-cd1b374f910a" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=74285985-60f2-4177-8898-cd1b374f910a</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=127" BrowseName="3:Measure" ParentNodeId="ns=3;g=74285985-60f2-4177-8898-cd1b374f910a" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=74285985-60f2-4177-8898-cd1b374f910a</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">%</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=128" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=74285985-60f2-4177-8898-cd1b374f910a" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=74285985-60f2-4177-8898-cd1b374f910a</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=129" BrowseName="3:Gathering" ParentNodeId="ns=3;g=74285985-60f2-4177-8898-cd1b374f910a" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=74285985-60f2-4177-8898-cd1b374f910a</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=ade4b164-dafd-4610-aa2d-d0508cd17121" BrowseName="3:BUFFER PEAK부하 #1-5  C/V#5" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>BUFFER PEAK부하 #1-5  C/V#5</DisplayName>
+    <Description>BUFFER PEAK부하 #1-5  C/V#5</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=130</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=131</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=132</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=133</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D7110</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=130" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=ade4b164-dafd-4610-aa2d-d0508cd17121" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=ade4b164-dafd-4610-aa2d-d0508cd17121</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=131" BrowseName="3:Measure" ParentNodeId="ns=3;g=ade4b164-dafd-4610-aa2d-d0508cd17121" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=ade4b164-dafd-4610-aa2d-d0508cd17121</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">%</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=132" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=ade4b164-dafd-4610-aa2d-d0508cd17121" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=ade4b164-dafd-4610-aa2d-d0508cd17121</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=133" BrowseName="3:Gathering" ParentNodeId="ns=3;g=ade4b164-dafd-4610-aa2d-d0508cd17121" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=ade4b164-dafd-4610-aa2d-d0508cd17121</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=2ccd7c77-4a63-4fc7-a001-8e1a2f2752b3" BrowseName="3:BUFFER PEAK부하 #1-6  C/V#6" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>BUFFER PEAK부하 #1-6  C/V#6</DisplayName>
+    <Description>BUFFER PEAK부하 #1-6  C/V#6</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=134</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=135</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=136</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=137</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D7112</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=134" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=2ccd7c77-4a63-4fc7-a001-8e1a2f2752b3" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=2ccd7c77-4a63-4fc7-a001-8e1a2f2752b3</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=135" BrowseName="3:Measure" ParentNodeId="ns=3;g=2ccd7c77-4a63-4fc7-a001-8e1a2f2752b3" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=2ccd7c77-4a63-4fc7-a001-8e1a2f2752b3</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">%</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=136" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=2ccd7c77-4a63-4fc7-a001-8e1a2f2752b3" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=2ccd7c77-4a63-4fc7-a001-8e1a2f2752b3</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=137" BrowseName="3:Gathering" ParentNodeId="ns=3;g=2ccd7c77-4a63-4fc7-a001-8e1a2f2752b3" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=2ccd7c77-4a63-4fc7-a001-8e1a2f2752b3</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=cf6e0ca3-f910-4a60-a6d2-bf69f9e139e8" BrowseName="3:SPD GAUGE SOSU" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="ns=0;i=10">
+    <DisplayName>SPD GAUGE SOSU</DisplayName>
+    <Description>Gauge1 소수</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=138</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=139</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=140</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=141</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D32002</AddressOnDevice>
+        <DecimalPlace>2</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Float xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Float>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=138" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=cf6e0ca3-f910-4a60-a6d2-bf69f9e139e8" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=cf6e0ca3-f910-4a60-a6d2-bf69f9e139e8</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=139" BrowseName="3:Measure" ParentNodeId="ns=3;g=cf6e0ca3-f910-4a60-a6d2-bf69f9e139e8" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=cf6e0ca3-f910-4a60-a6d2-bf69f9e139e8</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">NA</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=140" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=cf6e0ca3-f910-4a60-a6d2-bf69f9e139e8" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=cf6e0ca3-f910-4a60-a6d2-bf69f9e139e8</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=141" BrowseName="3:Gathering" ParentNodeId="ns=3;g=cf6e0ca3-f910-4a60-a6d2-bf69f9e139e8" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=cf6e0ca3-f910-4a60-a6d2-bf69f9e139e8</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=97fe8ec6-36f8-493a-85a3-0190fd3028b7" BrowseName="3:SPD GAUGE JISU" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>SPD GAUGE JISU</DisplayName>
+    <Description>Gauge1 10^지수</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=142</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=143</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=144</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=145</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D32004</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=142" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=97fe8ec6-36f8-493a-85a3-0190fd3028b7" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=97fe8ec6-36f8-493a-85a3-0190fd3028b7</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=143" BrowseName="3:Measure" ParentNodeId="ns=3;g=97fe8ec6-36f8-493a-85a3-0190fd3028b7" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=97fe8ec6-36f8-493a-85a3-0190fd3028b7</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">pa</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=144" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=97fe8ec6-36f8-493a-85a3-0190fd3028b7" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=97fe8ec6-36f8-493a-85a3-0190fd3028b7</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=145" BrowseName="3:Gathering" ParentNodeId="ns=3;g=97fe8ec6-36f8-493a-85a3-0190fd3028b7" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=97fe8ec6-36f8-493a-85a3-0190fd3028b7</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=d580dd47-07ad-4209-a3c0-b124fb74b73c" BrowseName="3:SPD GAUGE2 SOSU" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="ns=0;i=10">
+    <DisplayName>SPD GAUGE2 SOSU</DisplayName>
+    <Description>Gauge2 소수</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=146</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=147</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=148</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=149</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D32012</AddressOnDevice>
+        <DecimalPlace>2</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Float xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Float>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=146" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=d580dd47-07ad-4209-a3c0-b124fb74b73c" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=d580dd47-07ad-4209-a3c0-b124fb74b73c</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=147" BrowseName="3:Measure" ParentNodeId="ns=3;g=d580dd47-07ad-4209-a3c0-b124fb74b73c" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=d580dd47-07ad-4209-a3c0-b124fb74b73c</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">NA</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=148" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=d580dd47-07ad-4209-a3c0-b124fb74b73c" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=d580dd47-07ad-4209-a3c0-b124fb74b73c</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=149" BrowseName="3:Gathering" ParentNodeId="ns=3;g=d580dd47-07ad-4209-a3c0-b124fb74b73c" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=d580dd47-07ad-4209-a3c0-b124fb74b73c</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;g=41a1bb02-3dc5-4823-90e7-a04728cbfe5a" BrowseName="3:SPD GAUGE2 JISU" ParentNodeId="ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6" DataType="Int16">
+    <DisplayName>SPD GAUGE2 JISU</DisplayName>
+    <Description>Gauge2 10^지수</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=0;i=2366</Reference>
+      <Reference ReferenceType="HasProperty">ns=0;i=2367</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=150</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=151</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=152</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;i=153</Reference>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=2</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=2e0ad9a0-3045-4914-8242-f115086a11d6</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <AddressOnDevice>D32014</AddressOnDevice>
+        <DecimalPlace>0</DecimalPlace>
+        <DeviceId>OP2_Alpha_SPD_M_0</DeviceId>
+        <Length>1</Length>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int16 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int16>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=150" BrowseName="3:Item_Type" ParentNodeId="ns=3;g=41a1bb02-3dc5-4823-90e7-a04728cbfe5a" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Item_Type</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=41a1bb02-3dc5-4823-90e7-a04728cbfe5a</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PV</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=151" BrowseName="3:Measure" ParentNodeId="ns=3;g=41a1bb02-3dc5-4823-90e7-a04728cbfe5a" DataType="String" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Measure</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=41a1bb02-3dc5-4823-90e7-a04728cbfe5a</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">pa</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=152" BrowseName="3:Sampling_Interval" ParentNodeId="ns=3;g=41a1bb02-3dc5-4823-90e7-a04728cbfe5a" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Sampling_Interval</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=41a1bb02-3dc5-4823-90e7-a04728cbfe5a</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">500</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;i=153" BrowseName="3:Gathering" ParentNodeId="ns=3;g=41a1bb02-3dc5-4823-90e7-a04728cbfe5a" DataType="ns=0;i=6" ValueRank="1" MinimumSamplingInterval="-1">
+    <DisplayName>Gathering</DisplayName>
+    <References>
+      <Reference ReferenceType="HasModellingRule">ns=0;i=78</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=0;i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=3;g=41a1bb02-3dc5-4823-90e7-a04728cbfe5a</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1</Int32>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=3;g=4acf0518-cd2d-4da7-9905-995bd142b428" BrowseName="3:NIPC" ParentNodeId="ns=3;g=8f641362-79d4-4ab6-aab1-0a2ec577c12c" EventNotifier="1">
+    <DisplayName>NIPC</DisplayName>
+    <Description>NIPC</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=100</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;g=8f641362-79d4-4ab6-aab1-0a2ec577c12c</Reference>
+    </References>
+  </UAObject>
+</UANodeSet>
